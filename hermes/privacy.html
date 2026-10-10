@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermes Personal Automation — Privacy &amp; Data Use</title>
+<style>
+  :root { color-scheme: light; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; background: #fafafa; color: #1f2328; line-height: 1.6; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
+  h1 { font-size: 1.9rem; margin-bottom: 4px; }
+  .tagline { color: #59636e; margin-top: 0; }
+  h2 { font-size: 1.2rem; margin-top: 2rem; border-bottom: 1px solid #d1d9e0; padding-bottom: 6px; }
+  a { color: #0969da; }
+  footer { margin-top: 3rem; font-size: .9rem; color: #59636e; border-top: 1px solid #d1d9e0; padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy &amp; Data-Use Disclosure</h1>
+  <p class="tagline">Hermes Personal Automation — Google account data</p>
+
+  <h2>1. Who we are</h2>
+  <p>This application ("Hermes") is a personal automation agent operated by Carl Eshen
+  ("the operator") on the operator's own computer. It serves exactly one user: the
+  operator. There is no other customer, user base, or data collection from any other
+  party. Contact: the operator, via the support email shown on the OAuth consent screen.</p>
+
+  <h2>2. What Google account data is accessed</h2>
+  <p>With the operator's explicit OAuth consent, the application accesses the following
+  scopes, all restricted to the single consenting Google account:</p>
+  <ul>
+    <li><strong>Gmail</strong> — <code>gmail.readonly</code>, <code>gmail.send</code>,
+        <code>gmail.modify</code> (reading email; sending or labelling messages only when
+        the operator explicitly requests it);</li>
+    <li><strong>Google Calendar</strong> — listing and managing calendar events;</li>
+    <li><strong>Google Drive</strong> — accessing files the operator asks about;</li>
+    <li><strong>Google Sheets and Google Docs</strong> — reading and editing documents at
+        the operator's request;</li>
+    <li><strong>Google Contacts</strong> — <code>contacts.readonly</code> (resolving names
+        mentioned in tasks).</li>
+  </ul>
+
+  <h2>3. How the data is processed</h2>
+  <p>Data is fetched from Google's APIs at the moment a task is requested and is processed
+  for that task only. Typical processing includes summarising unread email, listing
+  upcoming calendar events, and drafting replies or documents. The operator reviews and
+  approves every action before the application sends, modifies or deletes anything.</p>
+
+  <h2>4. Third-party AI providers</h2>
+  <p>To interpret requests and produce summaries and drafts, the application sends task
+  content — which may include snippets of email text, event details, or document
+  excerpts — to large language model (AI) providers used by the Hermes software. At the
+  time of writing these are <strong>OpenRouter</strong> (API gateway) and the model
+  provider it routes to (e.g. <strong>Z.ai</strong>). Such providers receive only the
+  text needed for the task, do not use it to advertise to anyone, and process it under
+  their own published terms. No Google account passwords, tokens, or full mailboxes are
+  sent to AI providers — only the specific content required for the current task.
+  If a spoken (voice) summary is requested, the text to be spoken may also be sent
+  to a text-to-speech service (currently Microsoft's Edge TTS).</p>
+
+  <h2>5. Storage and retention</h2>
+  <ul>
+    <li><strong>OAuth tokens</strong> (the credential that lets the application connect)
+        are stored locally on the operator's own computer only, in the Hermes
+        application's local data folder. They are never uploaded to any server operated
+        by the operator.</li>
+    <li><strong>Email and document content</strong> is processed transiently for each
+        task; generated summaries may be written to the operator's local machine as part
+        of the requested output. There is no central database and no long-term archive of
+        Google data.</li>
+  </ul>
+
+  <h2>6. Sharing</h2>
+  <p>Google account data is shared with <strong>no one</strong> except: (a) Google's own
+  APIs (source of the data), and (b) the AI providers described in §4, strictly as
+  needed to complete a requested task. Data is never sold, rented, or used to train
+  models by the operator, and no advertising identifiers are collected.</p>
+
+  <h2>7. Revocation</h2>
+  <p>The operator can revoke this application's access at any time at
+  <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+  Revocation immediately disables all data access.</p>
+
+  <footer>
+    Operator and owner: Carl Eshen ·
+    <a href="index.html">About Hermes Personal Automation</a>
+  </footer>
+</main>
+</body>
+</html>
